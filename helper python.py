@@ -84,3 +84,99 @@ def lowest_product(input):
     return min(map(lambda a,b,c,d : a * b * c * d, s[:-3], s[1:-2], s[2:-1], s[3:]))
 
 print(lowest_product("2345611117899"))
+
+
+
+
+"""
+not in array
+"""
+
+def find(string_, list_):
+  return True if string_ in list_ else False
+
+""""
+Given an array of integers of any length, return an array that has 1 added to the value represented by the array.
+
+For example an array [2, 3, 9] equals 239, add one would return an array [2, 4, 0].
+
+[4, 3, 2, 5] would return [4, 3, 2, 6]
+
+The array can't be empty and only positive, single digit integers are allowed. The function should return null if the array is empty or any of the array values are negative or more than 10.
+
+[1, -9] would return null/nil/None (according to the language implemented).
+
+""""
+
+def up_array(arr):
+    return None if arr==[] or any([x not in range(10) for x in arr]) else [int(c) for c in str(int("".join([str(x) for x in arr]))+1)]
+
+
+"""
+For the purposes of this kata, here is what makes a valid email:
+
+At least one letter character at the beginning
+All characters between the first character and the @ (if any) must be letters, numbers, or underscores
+There must be an @ character (after the points listed just now)
+After the @ character, there must be at least one word character (letter, number, or underscore) or hyphen
+The email must end with at least one set of a dot followed by one or more word characters.
+The input must NOT be case-sensitive
+"""
+import re
+
+def validate(input_):
+    return bool(re.match(r'^[A-Za-z]\w*@[\w-]+(\.\w+)+$', input_))
+
+"""
+for you'r inf
+"""
+def greet(name):
+    return "Hello, {} how are you doing today?".format(name)
+
+"""
+syntax
+"""
+def fizzbuzz(n):
+    if n % 15 == 0:return 'fizz buzz'
+    elif n % 5 == 0:return 'buzz'
+    elif n % 3 == 0:return 'fizz'
+    return n
+
+
+"""
+
+"for"  in "return" ( only if len == 4 )
+
+"""
+def friend(x):
+    return [f for f in x if len(f) == 4]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
