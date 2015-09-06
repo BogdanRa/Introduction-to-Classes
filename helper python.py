@@ -167,7 +167,11 @@ def seven_ate9(str_):
 
 
 
-
+"""
+open file
+"""
+with open("text.txt", "w") as textfile:
+	textfile.write("Success!")
 
 
 
