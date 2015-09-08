@@ -184,6 +184,19 @@ def cookie(x):
     return "Who ate the last cookie? It was %s!" % {str:"Zach", float:"Monica", int:"Monica"}.get(type(x), "the dog")
 
 
+"""
+1 similar code variation is grouped with this one
+"""
+def flatten(list):
+  return [item for sublist in list for item in sublist]
+
+
+or
+
+from itertools import chain
+
+def flatten(l):
+  return list(chain(*l))
 
 
 
